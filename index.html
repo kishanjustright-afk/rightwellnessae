@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>rightWELLNESS UAE — Premium Wellness Technology Dubai</title>
+<meta name="description" content="Premium wellness technology and consultation-led services for beauty, recovery, active aging, and body wellness in Dubai & UAE.">
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="assets/wellnessLogo.svg">
+<link rel="shortcut icon" type="image/png" href="assets/wellnessIcon.svg">
+<link rel="apple-touch-icon" href="assets/wellnessIcon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --teal: #2BBCB8;
+  --teal-light: #5ED0CC;
+  --teal-pale: #A8E8E6;
+  --navy-deep: #0E1A30;
+  --navy-mid: #1B2A4A;
+  --navy-accent: #243560;
+  --teal-deep: #1A8A87;
+  --off-white: #F4F8F8;
+  --cream: #E8F4F4;
+  --charcoal: #1C1C1E;
+  --text-light: rgba(244,248,248,0.90);
+  --text-muted: rgba(244,248,248,0.55);
+  --border-teal: rgba(43,188,184,0.28);
+  --border-light: rgba(244,248,248,0.10);
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'Jost', sans-serif;
+  --max: 1200px;
+  --radius: 2px;
+  --radius-lg: 4px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--sans);
+  background: var(--navy-deep);
+  color: var(--off-white);
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+/* ─── TYPOGRAPHY ─── */
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; letter-spacing: 0.01em; }
+h1 { font-size: clamp(2.4rem, 5vw, 4.2rem); line-height: 1.1; }
+h2 { font-size: clamp(1.9rem, 3.5vw, 3rem); line-height: 1.2; }
+h3 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); line-height: 1.3; }
+h4 { font-size: 1.15rem; }
+
+.gold { color: var(--teal); }
+.italic { font-style: italic; }
+.overline {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--teal);
+}
+
+/* ─── LAYOUT ─── */
+.container { max-width: var(--max); margin: 0 auto; padding: 0 1.5rem; }
+.section { padding: 6rem 0; }
+.section-sm { padding: 4rem 0; }
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+
+@media (max-width: 900px) {
+  .grid-2 { grid-template-columns: 1fr; }
+  .grid-3 { grid-template-columns: 1fr 1fr; }
+  .grid-4 { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  .section { padding: 4rem 0; }
+}
+
+/* ─── DIVIDERS ─── */
+.divider {
+  width: 60px; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--teal), transparent);
+  margin: 1.5rem auto;
+}
+.divider-left { margin-left: 0; }
+
+/* ─── NAVIGATION ─── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(182, 226, 241, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-teal);
+}
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.1rem 1.5rem;
+  max-width: var(--max); margin: 0 auto;
+}
+.nav-logo {
+  height: 38px;
+  width: auto;
+  display: block;
+}
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.logo-link:hover {
+  opacity: 0.9;
+}
+.nav-links {
+  display: flex; gap: 2rem; list-style: none;
+  align-items: center;
+}
+.nav-links a {
+  color: var(--navy-deep); text-decoration: none;
+  font-size: 0.8rem; font-weight: 500;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--teal); }
+.nav-cta {
+  background: transparent;
+  border: 1px solid var(--teal);
+  color: var(--teal) !important;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.75rem !important;
+  letter-spacing: 0.15em !important;
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s !important;
+  text-decoration: none;
+  font-family: var(--sans);
+}
+.nav-cta:hover { background: var(--teal); color: var(--navy-deep) !important; }
+
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 1px; background: var(--teal); margin: 6px 0; transition: 0.3s; }
+
+.mobile-menu {
+  display: none;
+  position: fixed; top: 60px; left: 0; right: 0; z-index: 99;
+  background: rgba(244,248,248,0.98);
+  border-bottom: 1px solid var(--border-teal);
+  padding: 1.5rem;
+}
+.mobile-menu.open { display: block; }
+.mobile-menu a {
+  display: block; padding: 0.75rem 0;
+  color: var(--navy-deep); text-decoration: none;
+  font-size: 0.85rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+  border-bottom: 1px solid var(--border-teal);
+}
+
+@media (max-width: 800px) {
+  .nav-links { display: none; }
+  .hamburger { display: block; }
+}
+
+/* ─── HERO ─── */
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(165deg, rgba(8, 15, 30, 0.8) 0%, rgba(14, 26, 48, 0.75) 40%, rgba(27, 42, 74, 0.7) 75%, rgba(14, 26, 48, 0.85) 100%),
+              url('assets/heroImage.png') center/cover no-repeat;
+  display: flex; align-items: center;
+  position: relative; overflow: hidden;
+  padding-top: 80px;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 60% 60% at 70% 50%, rgba(43,188,184,0.07) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 80% at 20% 30%, rgba(43,188,184,0.4) 0%, transparent 60%);
+}
+.hero-pattern {
+  position: absolute; inset: 0;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(43,188,184,0.04) 80px),
+    repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(43,188,184,0.04) 80px);
+}
+.hero-content {
+  position: relative; z-index: 1;
+  max-width: 720px;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 0.75rem;
+  border: 1px solid var(--border-teal);
+  padding: 0.4rem 1rem 0.4rem 0.75rem;
+  margin-bottom: 2rem;
+  font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--teal);
+}
+.hero-badge::before {
+  content: ''; width: 6px; height: 6px;
+  background: var(--teal); border-radius: 50%;
+  flex-shrink: 0;
+}
+.hero h1 { margin-bottom: 1.25rem; }
+.hero h1 em { font-style: italic; color: var(--teal); }
+.hero-sub {
+  font-size: 1.05rem; font-weight: 300;
+  color: var(--text-light); max-width: 560px;
+  margin-bottom: 2.5rem; line-height: 1.8;
+}
+.hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+.hero-scroll {
+  position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+  color: var(--text-muted); font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
+  animation: float 2.5s ease-in-out infinite;
+}
+.hero-scroll svg { opacity: 0.5; }
+@keyframes float { 0%,100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(6px); } }
+
+/* ─── BUTTONS ─── */
+.btn {
+  display: inline-block; text-decoration: none;
+  font-family: var(--sans); font-size: 0.78rem;
+  font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;
+  padding: 0.9rem 2rem; cursor: pointer; border: none;
+  transition: all 0.25s;
+}
+.btn-primary {
+  background: var(--teal);
+  color: var(--navy-deep);
+}
+.btn-primary:hover { background: var(--teal-light); }
+.btn-outline {
+  background: transparent;
+  border: 1px solid rgba(43,188,184,0.5);
+  color: var(--teal);
+}
+.btn-outline:hover { border-color: var(--teal); background: rgba(43,188,184,0.08); }
+.btn-dark {
+  background: var(--navy-mid);
+  border: 1px solid var(--border-teal);
+  color: var(--off-white);
+}
+.btn-dark:hover { background: var(--navy-accent); }
+
+/* ─── SERVICE CARDS ─── */
+.services-section {
+  background: linear-gradient(180deg, var(--navy-deep) 0%, #0A1520 100%);
+}
+.services-intro { text-align: center; max-width: 640px; margin: 0 auto 4rem; }
+.service-card {
+  background: rgba(27,42,74,0.4);
+  border: 1px solid var(--border-teal);
+  padding: 2.25rem 2rem;
+  position: relative; overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.service-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--teal), transparent);
+  transform: scaleX(0); transition: transform 0.4s;
+}
+.service-card:hover { transform: translateY(-4px); box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
+.service-card:hover::before { transform: scaleX(1); }
+.service-icon {
+  width: 48px; height: 48px; margin-bottom: 1.25rem;
+  opacity: 0.8;
+}
+.service-card h3 { margin-bottom: 0.75rem; font-size: 1.3rem; }
+.service-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; }
+.service-card .card-link {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  margin-top: 1.25rem; color: var(--teal); font-size: 0.75rem;
+  letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none;
+  transition: gap 0.2s;
+}
+.service-card .card-link:hover { gap: 0.7rem; }
+
+/* ─── TECHNOLOGY ─── */
+.tech-section {
+  background: #060D18;
+  position: relative; overflow: hidden;
+}
+.tech-section::before {
+  content: '';
+  position: absolute; top: -20%; right: -10%;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(43,188,184,0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+.tech-visual {
+  background: rgba(27,42,74,0.3);
+  border: 1px solid var(--border-teal);
+  padding: 3rem;
+  position: relative;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.tech-badge-row {
+  display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2rem;
+}
+.tech-badge {
+  border: 1px solid var(--border-teal);
+  padding: 0.35rem 0.9rem;
+  font-size: 0.7rem; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--teal);
+}
+.tech-specs {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem;
+}
+.spec-item { border-left: 1px solid var(--border-teal); padding-left: 1rem; }
+.spec-item h4 { color: var(--teal); font-family: var(--sans); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.35rem; }
+.spec-item p { font-size: 0.88rem; color: var(--text-muted); }
+
+.attachment-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
+.attachment-card {
+  background: rgba(43,188,184,0.25);
+  border: 1px solid var(--border-teal);
+  padding: 1.75rem 1.5rem;
+}
+.attachment-card h4 { font-family: var(--serif); font-size: 1.2rem; margin-bottom: 0.5rem; }
+.attachment-card p { font-size: 0.85rem; color: var(--text-muted); }
+
+/* ─── UAE AUDIENCE ─── */
+.audience-section {
+  background: linear-gradient(135deg, #0E1A30 0%, #080F1E 60%);
+}
+.audience-card {
+  border: 1px solid var(--border-light);
+  padding: 2rem;
+  background: rgba(255,255,255,0.02);
+  transition: border-color 0.3s;
+}
+.audience-card:hover { border-color: var(--border-teal); }
+.audience-card .num {
+  font-family: var(--serif); font-size: 2.5rem;
+  color: var(--teal); opacity: 0.3;
+  margin-bottom: 0.5rem; line-height: 1;
+}
+.audience-card h4 { font-family: var(--sans); font-size: 0.85rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--off-white); margin-bottom: 0.5rem; }
+.audience-card p { font-size: 0.85rem; color: var(--text-muted); }
+
+/* ─── B2B ─── */
+.b2b-section {
+  background: var(--navy-mid);
+  border-top: 1px solid var(--border-teal);
+  border-bottom: 1px solid var(--border-teal);
+  padding: 5rem 0;
+}
+.b2b-features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
+.b2b-feature { text-align: center; }
+.b2b-feature svg { margin-bottom: 1rem; opacity: 0.7; }
+.b2b-feature h4 { font-family: var(--sans); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--teal); margin-bottom: 0.5rem; }
+.b2b-feature p { font-size: 0.85rem; color: var(--text-muted); }
+@media (max-width: 700px) { .b2b-features { grid-template-columns: 1fr; } }
+
+/* ─── SAFETY ─── */
+.safety-section { background: #060D18; }
+.safety-box {
+  border: 1px solid rgba(43,188,184,0.4);
+  padding: 3rem;
+  background: rgba(14,26,48,0.6);
+  max-width: 900px; margin: 0 auto;
+}
+.safety-list {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem 2rem;
+  margin: 1.5rem 0; list-style: none;
+}
+.safety-list li {
+  display: flex; align-items: flex-start; gap: 0.65rem;
+  font-size: 0.88rem; color: var(--text-muted);
+}
+.safety-list li::before { content: '—'; color: var(--teal); flex-shrink: 0; margin-top: 0.1em; }
+@media (max-width: 600px) { .safety-list { grid-template-columns: 1fr; } }
+.disclaimer {
+  margin-top: 2rem; padding: 1.25rem 1.5rem;
+  border-left: 2px solid var(--teal);
+  background: rgba(43,188,184,0.05);
+  font-size: 0.8rem; color: var(--text-muted); line-height: 1.7;
+}
+
+/* ─── TESTIMONIALS / QUOTE ─── */
+.quote-section {
+  padding: 6rem 0;
+  background: linear-gradient(180deg, #060D18 0%, var(--navy-deep) 100%);
+  text-align: center;
+}
+.big-quote {
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 300; font-style: italic;
+  color: var(--off-white);
+  max-width: 780px; margin: 0 auto 1.5rem;
+  line-height: 1.5;
+}
+
+/* ─── ABOUT STRIP ─── */
+.about-strip {
+  background: rgba(27,42,74,0.3);
+  border-top: 1px solid var(--border-teal);
+  border-bottom: 1px solid var(--border-teal);
+  padding: 4rem 0;
+}
+.stats-row { display: flex; gap: 0; justify-content: center; flex-wrap: wrap; }
+.stat-item {
+  padding: 1.5rem 3rem;
+  border-right: 1px solid var(--border-teal);
+  text-align: center;
+}
+.stat-item:last-child { border-right: none; }
+.stat-item .big-num { font-family: var(--serif); font-size: 2.8rem; color: var(--teal); line-height: 1; }
+.stat-item p { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-top: 0.35rem; }
+@media (max-width: 600px) {
+  .stat-item { border-right: none; border-bottom: 1px solid var(--border-teal); width: 50%; }
+  .stat-item:last-child, .stat-item:nth-child(even):last-child { border-bottom: none; }
+}
+
+/* ─── CONTACT ─── */
+.contact-section {
+  background: linear-gradient(180deg, var(--navy-deep) 0%, #060D18 100%);
+}
+.contact-grid {
+  display: grid; grid-template-columns: 1fr 1.4fr; gap: 5rem; align-items: start;
+}
+.contact-info h2 { margin-bottom: 1rem; }
+.contact-info p { color: var(--text-muted); margin-bottom: 2rem; }
+.contact-detail {
+  display: flex; gap: 1rem; margin-bottom: 1.5rem;
+}
+.contact-detail-label { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--teal); margin-bottom: 0.2rem; }
+.contact-detail-val { font-size: 0.9rem; color: var(--text-light); }
+@media (max-width: 800px) { .contact-grid { grid-template-columns: 1fr; gap: 3rem; } }
+
+/* ─── FORM ─── */
+.form-group { margin-bottom: 1.25rem; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+@media (max-width: 560px) { .form-row { grid-template-columns: 1fr; } }
+label {
+  display: block; font-size: 0.7rem; font-weight: 500;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--teal); margin-bottom: 0.5rem;
+}
+input, select, textarea {
+  width: 100%;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(43,188,184,0.25);
+  color: var(--off-white);
+  padding: 0.85rem 1rem;
+  font-family: var(--sans); font-size: 0.9rem; font-weight: 300;
+  outline: none; transition: border-color 0.2s;
+  -webkit-appearance: none; appearance: none;
+  border-radius: 0;
+}
+input:focus, select:focus, textarea:focus { border-color: var(--teal); }
+input::placeholder, textarea::placeholder { color: rgba(247,244,239,0.3); }
+select option { background: var(--navy-deep); color: var(--off-white); }
+textarea { resize: vertical; min-height: 110px; }
+.form-privacy {
+  font-size: 0.75rem; color: var(--text-muted); margin-top: 1rem; line-height: 1.6;
+}
+
+/* ─── FOOTER ─── */
+footer {
+  background: rgba(226, 228, 228, 0.98);
+  border-top: 1px solid var(--border-teal);
+  padding: 4rem 0 2rem;
+}
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+.footer-logo { margin-bottom: 1rem; }
+.footer-logo img { height: 38px; width: auto; display: block; }
+.footer-tagline { font-size: 0.83rem; color: var(--navy-deep); max-width: 260px; line-height: 1.7; }
+.footer-col h5 { font-family: var(--sans); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--teal-deep); margin-bottom: 1rem; }
+.footer-col a { display: block; color: var(--navy-mid); text-decoration: none; font-size: 0.85rem; margin-bottom: 0.5rem; transition: color 0.2s; }
+.footer-col a:hover { color: var(--teal); }
+.footer-bottom {
+  border-top: 1px solid rgba(43,188,184,0.28); padding-top: 1.5rem;
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+}
+.footer-bottom p { font-size: 0.75rem; color: var(--navy-mid); }
+@media (max-width: 800px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 500px) { .footer-grid { grid-template-columns: 1fr; } }
+
+/* ─── PAGE SECTIONS (sub-pages in one file via anchors) ─── */
+.page-hero {
+  padding: 10rem 0 5rem;
+  background: linear-gradient(165deg, #080F1E 0%, #0E1A30 60%, #1B2A4A 100%);
+  border-bottom: 1px solid var(--border-teal);
+}
+.page-hero h1 { margin-bottom: 1rem; }
+.page-hero p { font-size: 1.05rem; color: var(--text-muted); max-width: 600px; }
+
+/* ─── ANIMATIONS ─── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp 0.7s ease forwards; }
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+
+/* ─── TOAST ─── */
+.toast {
+  position: fixed; bottom: 2rem; right: 2rem; z-index: 999;
+  background: var(--navy-mid); border: 1px solid var(--teal);
+  padding: 1rem 1.5rem; font-size: 0.85rem;
+  color: var(--off-white); display: none;
+  animation: fadeUp 0.3s ease;
+}
+
+/* ─── VIP SECTION ─── */
+.vip-section { background: linear-gradient(135deg, #060D18 0%, #0E1A30 100%); }
+.vip-card {
+  border: 1px solid var(--border-teal);
+  padding: 2.5rem; background: rgba(27,42,74,0.3);
+  position: relative; overflow: hidden;
+}
+.vip-card::after {
+  content: '';
+  position: absolute; bottom: 0; right: 0;
+  width: 150px; height: 150px;
+  background: radial-gradient(circle, rgba(43,188,184,0.08) 0%, transparent 70%);
+}
+
+/* ─── ACTIVE SCROLL STATE ─── */
+.nav-links a.active { color: var(--teal); }
+</style>
+</head>
+<body>
+
+<!-- ─── NAVIGATION ─── -->
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a href="#home" class="logo-link">
+      <img src="assets/wellnessLogo.svg" alt="rightWELLNESS Logo" class="nav-logo">
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#technology">Technology</a></li>
+      <li><a href="#clinics">For Clinics</a></li>
+      <li><a href="#vip">VIP Wellness</a></li>
+      <li><a href="#safety">Safety</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact" class="nav-cta">Book Enquiry</a></li>
+    </ul>
+    <button class="hamburger" id="ham" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mob-menu">
+  <a href="#services" onclick="closeMob()">Services</a>
+  <a href="#technology" onclick="closeMob()">Technology</a>
+  <a href="#clinics" onclick="closeMob()">For Clinics</a>
+  <a href="#vip" onclick="closeMob()">VIP Wellness</a>
+  <a href="#safety" onclick="closeMob()">Safety & Suitability</a>
+  <a href="#about" onclick="closeMob()">About</a>
+  <a href="#contact" onclick="closeMob()" style="color:var(--teal); margin-top:1rem; font-weight:500;">Book an Enquiry →</a>
+</div>
+
+<!-- ─── HERO ─── -->
+<section class="hero" id="home">
+  <div class="hero-pattern"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge fade-up">Premium Wellness Technology · Dubai UAE</div>
+      <h1 class="fade-up delay-1">Advanced Wellness Experiences<br>for Dubai's <em>Modern Lifestyle</em></h1>
+      <p class="hero-sub fade-up delay-2">Human touch, advanced wellness technology, and refined care experiences for active aging, recovery, beauty, and body wellness.</p>
+      <div class="hero-ctas fade-up delay-3">
+         <a href="#services" class="btn btn-outline">Explore Services</a>
+        <a href="#contact" class="btn btn-primary">Reach Us</a>
+       
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ─── ABOUT STRIP ─── -->
+<div class="about-strip">
+  <div class="container">
+    <div class="stats-row">
+      <div class="stat-item"><div class="big-num">7</div><p>Emirates Served</p></div>
+      <div class="stat-item"><div class="big-num">6</div><p>Service Pillars</p></div>
+      <div class="stat-item"><div class="big-num">∞</div><p>Care Commitment</p></div>
+      <div class="stat-item"><div class="big-num">AI</div><p>Advanced Wellness Tech</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── SERVICES ─── -->
+<section class="services-section section" id="services">
+  <div class="container">
+    <div class="services-intro">
+      <div class="overline">Our Services</div>
+      <div class="divider"></div>
+      <h2>Refined Wellness Experiences, <em>Tailored for You</em></h2>
+      <p style="color:var(--text-muted); margin-top:1rem; font-size:0.95rem;">Each experience combines selected wellness technologies, thoughtful consultation, and premium care environments, designed for recovery, skin vitality, active aging, and everyday wellbeing across the UAE.</p>
+    </div>
+    <div class="grid-3">
+
+      <!-- Card 1 -->
+      <div class="service-card">
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="var(--teal)" stroke-width="1.2">
+          <circle cx="24" cy="24" r="18"/>
+          <path d="M24 14 C20 14 16 18 16 23 C16 30 24 36 24 36 C24 36 32 30 32 23 C32 18 28 14 24 14Z"/>
+          <circle cx="24" cy="22" r="3"/>
+        </svg>
+        <h3>Wellness Consultation</h3>
+        <p>A calm, appointment-led starting point to understand your goals, lifestyle, preferences, and wellness priorities before recommending the right experience.</p>
+        <a href="#contact" class="card-link">Enquire →</a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="service-card">
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="var(--teal)" stroke-width="1.2">
+          <ellipse cx="24" cy="28" rx="14" ry="10"/>
+          <path d="M14 22 C14 16 19 12 24 12 C29 12 34 16 34 22"/>
+          <line x1="24" y1="12" x2="24" y2="8"/>
+          <circle cx="24" cy="7" r="2"/>
+        </svg>
+        <h3>Body Wellness & Recovery</h3>
+        <p>Technology-supported wellness experiences designed around comfort, relaxation, movement confidence, and recovery-focused lifestyle support.</p>
+        <a href="#contact" class="card-link">Enquire →</a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="service-card">
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="var(--teal)" stroke-width="1.2">
+          <path d="M24 8 C16 8 12 14 12 20 C12 30 18 38 24 40 C30 38 36 30 36 20 C36 14 32 8 24 8Z"/>
+          <path d="M18 22 Q24 18 30 22"/>
+          <circle cx="19" cy="20" r="1.5" fill="var(--teal)"/>
+          <circle cx="29" cy="20" r="1.5" fill="var(--teal)"/>
+          <path d="M20 30 Q24 33 28 30"/>
+        </svg>
+        <h3>Skin Analysis & Facial Wellness</h3>
+        <p>Refined skin wellness experiences supported by visual analysis, consultation, and personalised care direction for healthier-looking skin.</p>
+        <a href="#contact" class="card-link">Enquire →</a>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="service-card">
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="var(--teal)" stroke-width="1.2">
+          <path d="M24 8 L26 18 L36 18 L28 24 L31 34 L24 28 L17 34 L20 24 L12 18 L22 18Z"/>
+          <circle cx="24" cy="24" r="4" stroke="var(--teal)" stroke-width="0.8"/>
+        </svg>
+        <h3>Oxygen & Relaxation Experiences</h3>
+        <p>Premium oxygen-focused wellness environments created for calm, restoration, and recovery-oriented relaxation.</p>
+        <a href="#contact" class="card-link">Enquire →</a>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="service-card">
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="var(--teal)" stroke-width="1.2">
+          <rect x="10" y="14" width="28" height="22" rx="2"/>
+          <path d="M16 14 L16 10 L32 10 L32 14"/>
+          <line x1="20" y1="22" x2="28" y2="22"/>
+          <line x1="20" y1="27" x2="28" y2="27"/>
+          <circle cx="24" cy="38" r="2"/>
+        </svg>
+        <h3>Spa & Clinic Partnerships</h3>
+        <p>Bring selected rightWELLNESS concepts into premium wellness spaces, hotels, spas, aesthetic clinics, and partner environments across the UAE.</p>
+        <a href="#clinics" class="card-link">Learn More →</a>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="service-card">
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="var(--teal)" stroke-width="1.2">
+          <path d="M24 10 L30 20 L42 22 L33 31 L35 43 L24 37 L13 43 L15 31 L6 22 L18 20Z"/>
+        </svg>
+        <h3>VIP Wellness Packages</h3>
+        <p>Private wellness experiences for executives, VIP clients, and lifestyle-focused individuals who value discretion, comfort, and personalised service.</p>
+        <a href="#vip" class="card-link">Discover →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── TECHNOLOGY ─── -->
+<section class="tech-section section" id="technology">
+  <div class="container">
+    <div class="grid-2" style="gap:4rem;">
+      <div>
+        <div class="overline">Our Technology</div>
+        <div class="divider divider-left"></div>
+        <h2>Advanced Wellness Technology, Designed for Precision</em></h2>
+        <p style="color:var(--text-muted); margin:1.25rem 0; font-size:0.95rem; line-height:1.8;">rightWELLNESS brings selected wellness technologies into premium service environments, combining intelligent device support with trained human application. Each experience is designed to feel calm, considered, and personalised, never mechanical or generic.
+
+Our technology is used to support wellness, comfort, skin vitality, relaxation, and recovery-oriented experiences under trained supervision.</p>
+        <!-- <p style="color:var(--text-muted); font-size:0.88rem; line-height:1.8;">Each session is delivered by a trained wellness professional. The device supports — never replaces — the artistry of skilled care.</p> -->
+
+        <div class="tech-badge-row" style="margin-top:2rem;">
+          <span class="tech-badge">PROFESSIONAL USE</span>
+          <span class="tech-badge">PERSONALISED APPLICATION</span>
+          <span class="tech-badge">SKIN WELLNESS</span>
+          <span class="tech-badge">BODY WELLNESS</span>
+          <span class="tech-badge">RECOVERY & COMFORT</span>
+        </div>
+
+        <div class="tech-specs">
+          <div class="spec-item">
+            <h4>Wellness Care</h4>
+            <p>Whole-body sessions supporting comfort, circulation and relaxation.</p>
+          </div>
+          <div class="spec-item">
+            <h4>TARGETED WELLNESS AREAS</h4>
+            <p>Selected application areas can be adapted according to client comfort, goals, and professional guidance.</p>
+          </div>
+          <div class="spec-item">
+            <h4>Facial & Anti-Aging Care</h4>
+            <p>Targeting tone, radiance, and skin comfort without invasive procedures.</p>
+          </div>
+          <div class="spec-item">
+            <h4>PRODUCT-ASSISTED CARE</h4>
+            <p>Selected care experiences may be paired with compatible topical products where appropriate.</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="tech-visual">
+          <div style="margin-bottom:2rem;">
+            <div class="overline" style="margin-bottom:1rem;">Application Modes</div>
+            <h3 style="font-style:italic; color:var(--teal);">Two Refined Ways to Personalise the Experience</h3>
+          </div>
+          <div class="attachment-cards">
+            <div class="attachment-card">
+              <div style="width:40px;height:40px;border:1px solid var(--border-teal);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="var(--teal)" stroke-width="1.2">
+                  <path d="M4 8 C4 5 7 3 11 3 C15 3 18 5 18 8 L18 14 C18 17 15 19 11 19 C7 19 4 17 4 14Z"/>
+                  <circle cx="11" cy="11" r="2.5"/>
+                </svg>
+              </div>
+              <h4>Magical Glove</h4>
+              <p>Full-hand wearable attachment for intuitive, gliding body wellness application.</p>
+            </div>
+            <div class="attachment-card">
+              <div style="width:40px;height:40px;border:1px solid var(--border-teal);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="var(--teal)" stroke-width="1.2">
+                  <line x1="11" y1="3" x2="11" y2="19"/>
+                  <ellipse cx="11" cy="7" rx="4" ry="3"/>
+                  <circle cx="11" cy="17" r="2"/>
+                </svg>
+              </div>
+              <h4>Magical I Probe</h4>
+              <p>Precision probe for facial wellness, anti-aging care, and infusion-support applications.</p>
+            </div>
+          </div>
+          <div class="disclaimer" style="margin-top:1.75rem;">
+            All device applications are performed by trained wellness professionals. Results and experiences vary per individual. This technology is intended for wellness and aesthetic-care purposes only — not for the diagnosis, treatment, or cure of any medical condition.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── UAE AUDIENCE ─── -->
+<section class="audience-section section" id="clinics">
+  <div class="container">
+    <div style="text-align:center; max-width:640px; margin:0 auto 4rem;">
+      <div class="overline">Who We Serve</div>
+      <div class="divider"></div>
+      <h2>Built for Dubai's <em>Premium Wellness Market</em></h2>
+      <p style="color:var(--text-muted); margin-top:1rem; font-size:0.95rem;">From luxury hotel spas to corporate boardrooms, rightWELLNESS is designed for the environments where excellence is non-negotiable.</p>
+    </div>
+    <div class="grid-3">
+      <div class="audience-card">
+        <div class="num">01</div>
+        <h4>Premium Wellness Centers</h4>
+        <p>Elevate your service menu with technology-led wellness experiences that retain clients and command premium pricing.</p>
+      </div>
+      <div class="audience-card">
+        <div class="num">02</div>
+        <h4>Aesthetic Clinics</h4>
+        <p>Complement your clinical offerings with non-invasive wellness technology — expanding your treatment portfolio with confidence.</p>
+      </div>
+      <div class="audience-card">
+        <div class="num">03</div>
+        <h4>Hotel & Resort Spas</h4>
+        <p>Offer guests a signature wellness journey that reflects the hospitality excellence Dubai is renowned for globally.</p>
+      </div>
+      <div class="audience-card">
+        <div class="num">04</div>
+        <h4>Private VIP Clients</h4>
+        <p>Discreet, in-residence wellness sessions for high-net-worth individuals seeking personalised care on their schedule.</p>
+      </div>
+      <div class="audience-card">
+        <div class="num">05</div>
+        <h4>Corporate Wellness Partners</h4>
+        <p>Employee wellness programmes and executive health packages for organisations investing in their leadership's performance.</p>
+      </div>
+      <div class="audience-card">
+        <div class="num">06</div>
+        <h4>Salon & Beauty Businesses</h4>
+        <p>Differentiate your salon with a premium technology offering — attracting a new tier of client seeking advanced beauty wellness.</p>
+      </div>
+    </div>
+
+    <!-- B2B CTA -->
+    <div style="margin-top:4rem; border:1px solid var(--border-teal); padding:3rem; background:rgba(27,42,74,0.25); text-align:center;">
+      <div class="overline">Partnership Programme</div>
+      <h3 style="margin:1rem 0; font-style:italic;">Bring rightWELLNESS Into Your Space</h3>
+      <p style="color:var(--text-muted); max-width:560px; margin:0 auto 2rem; font-size:0.92rem;">We partner with selected wellness businesses across the UAE — providing device access, professional training, marketing support, and ongoing consultation. Enquire about our B2B partnership model.</p>
+      <a href="#contact" class="btn btn-primary">Request B2B Information</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── VIP / EXECUTIVE ─── -->
+<section class="vip-section section" id="vip">
+  <div class="container">
+    <div class="grid-2">
+      <div>
+        <div class="overline">Executive & VIP Wellness</div>
+        <div class="divider divider-left"></div>
+        <h2>For Those Who <em>Demand the Finest</em></h2>
+        <p style="color:var(--text-muted); margin:1.25rem 0; line-height:1.8; font-size:0.95rem;">Dubai's executives, high-net-worth residents, and discerning international visitors expect wellness care that matches their standards. rightWELLNESS offers a discreet, personalised service built entirely around your schedule, preferences, and privacy.</p>
+        <ul style="list-style:none; margin-bottom:2rem;">
+          <li style="padding:0.6rem 0; border-bottom:1px solid var(--border-light); font-size:0.88rem; color:var(--text-muted); display:flex; gap:1rem;"><span style="color:var(--teal);">—</span> In-residence or private studio sessions</li>
+          <li style="padding:0.6rem 0; border-bottom:1px solid var(--border-light); font-size:0.88rem; color:var(--text-muted); display:flex; gap:1rem;"><span style="color:var(--teal);">—</span> Dedicated wellness consultant assigned</li>
+          <li style="padding:0.6rem 0; border-bottom:1px solid var(--border-light); font-size:0.88rem; color:var(--text-muted); display:flex; gap:1rem;"><span style="color:var(--teal);">—</span> Fully customised service sequence</li>
+          <li style="padding:0.6rem 0; border-bottom:1px solid var(--border-light); font-size:0.88rem; color:var(--text-muted); display:flex; gap:1rem;"><span style="color:var(--teal);">—</span> Flexible scheduling across all seven Emirates</li>
+          <li style="padding:0.6rem 0; font-size:0.88rem; color:var(--text-muted); display:flex; gap:1rem;"><span style="color:var(--teal);">—</span> Complete confidentiality and discretion</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Enquire About VIP Access</a>
+      </div>
+      <div>
+        <div class="vip-card">
+          <div class="overline" style="margin-bottom:1.25rem;">Bespoke Packages Include</div>
+          <div style="display:grid; gap:1.5rem;">
+            <div style="padding-bottom:1.5rem; border-bottom:1px solid var(--border-light);">
+              <h4 style="color:var(--teal); font-family:var(--sans); font-size:0.8rem; letter-spacing:0.15em; text-transform:uppercase; margin-bottom:0.5rem;">Active Aging Programme</h4>
+              <p style="font-size:0.88rem; color:var(--text-muted);">A curated multi-session journey supporting vitality, skin wellness, and body comfort as part of a long-term wellness lifestyle.</p>
+            </div>
+            <div style="padding-bottom:1.5rem; border-bottom:1px solid var(--border-light);">
+              <h4 style="color:var(--teal); font-family:var(--sans); font-size:0.8rem; letter-spacing:0.15em; text-transform:uppercase; margin-bottom:0.5rem;">Recovery & Performance</h4>
+              <p style="font-size:0.88rem; color:var(--text-muted);">Designed for active professionals — supporting physical recovery, stress reduction, and sustained energy levels.</p>
+            </div>
+            <div style="padding-bottom:1.5rem; border-bottom:1px solid var(--border-light);">
+              <h4 style="color:var(--teal); font-family:var(--sans); font-size:0.8rem; letter-spacing:0.15em; text-transform:uppercase; margin-bottom:0.5rem;">Beauty Wellness Journey</h4>
+              <p style="font-size:0.88rem; color:var(--text-muted);">Facial and body wellness combined — a complete aesthetic care experience using both device attachments.</p>
+            </div>
+            <div>
+              <h4 style="color:var(--teal); font-family:var(--sans); font-size:0.8rem; letter-spacing:0.15em; text-transform:uppercase; margin-bottom:0.5rem;">Corporate Wellness Day</h4>
+              <p style="font-size:0.88rem; color:var(--text-muted);">On-site wellness events for teams and leadership groups — bookable for DIFC, ADGM, Dubai Marina, and across all business districts.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── QUOTE ─── -->
+<div class="quote-section">
+  <div class="container">
+    <div class="divider"></div>
+    <p class="big-quote">"Wellness is not a luxury — it is the foundation upon which performance, beauty, and longevity are built."</p>
+    <div style="font-size:0.75rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--teal);">rightWELLNESS Philosophy</div>
+    <div class="divider" style="margin-top:1.5rem;"></div>
+  </div>
+</div>
+
+<!-- ─── SAFETY ─── -->
+<section class="safety-section section" id="safety">
+  <div class="container">
+    <div style="text-align:center; max-width:600px; margin:0 auto 3rem;">
+      <div class="overline">Safety & Suitability</div>
+      <div class="divider"></div>
+      <h2>Before You <em>Begin</em></h2>
+      <p style="color:var(--text-muted); margin-top:1rem; font-size:0.92rem;">Your wellbeing is our first priority. All sessions begin with a professional consultation and suitability assessment.</p>
+    </div>
+    <div class="safety-box">
+      <h3 style="margin-bottom:0.5rem;">Who Should Consult a Professional First</h3>
+      <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom:1rem;">rightWELLNESS services may not be suitable for everyone. Please inform your wellness consultant if any of the following apply to you:</p>
+      <ul class="safety-list">
+        <li>Fitted with a pacemaker or other implanted cardiac device</li>
+        <li>Currently pregnant or trying to conceive</li>
+        <li>Metal implants, pins, or plates in the treatment area</li>
+        <li>Active fever, infection, or acute inflammation</li>
+        <li>Skin disorders, open wounds, or active lesions</li>
+        <li>Undergoing active medical treatment or chemotherapy</li>
+        <li>Epilepsy or a history of seizure disorders</li>
+        <li>Thrombosis or known blood clotting conditions</li>
+        <li>Severe diabetes or circulatory disorders</li>
+        <li>Recent surgical procedures (within 6 weeks)</li>
+        <li>Under 18 years of age</li>
+        <li>Hypersensitivity to heat or electrical stimulation</li>
+      </ul>
+
+      <div class="disclaimer">
+        <strong style="color:var(--teal); font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase;">Important Notice —</strong> rightWELLNESS services are wellness and aesthetic-care experiences, not medical treatments. We do not diagnose, treat, or claim to cure any medical condition. Results vary between individuals and are not guaranteed. Always consult your physician before beginning any new wellness programme, particularly if you have existing health conditions. Our trained wellness professionals will conduct a suitability review prior to your first session.
+      </div>
+      <div style="margin-top:2rem; text-align:center;">
+        <a href="#contact" class="btn btn-outline">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── B2B SECTION ─── -->
+<section class="b2b-section" id="partners">
+  <div class="container">
+    <div style="text-align:center; max-width:640px; margin:0 auto 1rem;">
+      <div class="overline">For Clinics, Spas & Salons</div>
+      <div class="divider"></div>
+      <h2>Elevate Your <em>Offering</em></h2>
+      <p style="color:var(--text-muted); margin-top:1rem; font-size:0.93rem;">We work with selected wellness businesses to integrate rightWELLNESS technology into their service environment — delivering competitive advantage, client retention, and new revenue streams.</p>
+    </div>
+    <div class="b2b-features">
+      <div class="b2b-feature">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="var(--teal)" stroke-width="1">
+          <rect x="6" y="8" width="24" height="20" rx="1"/>
+          <path d="M12 16 L16 20 L24 12"/>
+        </svg>
+        <h4>Device Access</h4>
+        <p>Flexible device placement and access models tailored to your business size and service volume.</p>
+      </div>
+      <div class="b2b-feature">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="var(--teal)" stroke-width="1">
+          <circle cx="18" cy="12" r="5"/>
+          <path d="M8 30 C8 24 13 20 18 20 C23 20 28 24 28 30"/>
+          <path d="M26 14 L30 18 M30 14 L26 18"/>
+        </svg>
+        <h4>Professional Training</h4>
+        <p>Certified training for your team covering device operation, protocols, and client consultation best practices.</p>
+      </div>
+      <div class="b2b-feature">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="var(--teal)" stroke-width="1">
+          <path d="M18 6 L22 14 L31 15 L25 21 L27 30 L18 26 L9 30 L11 21 L5 15 L14 14Z"/>
+        </svg>
+        <h4>Marketing Support</h4>
+        <p>Co-branded materials, digital assets, and brand guidelines to help you promote rightWELLNESS services confidently.</p>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:3rem;">
+      <a href="#contact" class="btn btn-primary">Request a Partnership Call</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── ABOUT ─── -->
+<section class="section" id="about" style="background:linear-gradient(180deg, var(--navy-deep) 0%, #060D18 100%);">
+  <div class="container">
+    <div class="grid-2">
+      <div>
+        <div class="overline">About rightWELLNESS UAE</div>
+        <div class="divider divider-left"></div>
+        <h2>Premium Wellness, <em>Locally Understood</em></h2>
+        <p style="color:var(--text-muted); margin:1.25rem 0; line-height:1.8; font-size:0.95rem;">rightWELLNESS UAE brings the global rightWELLNESS platform to the unique needs of the UAE market. We understand Dubai's pace, its standards of excellence, and the diverse wellness aspirations of its multicultural community.</p>
+        <p style="color:var(--text-muted); margin-bottom:1.5rem; line-height:1.8; font-size:0.92rem;">Our approach is consultation-led, discreet, and professional — working with qualified wellness practitioners to deliver experiences that are both technically advanced and deeply human.</p>
+        <p style="color:var(--text-muted); font-size:0.92rem; line-height:1.8;">Based in Dubai, we serve clients and business partners across all seven Emirates — from Abu Dhabi to Sharjah, Ras Al Khaimah to Fujairah.</p>
+      </div>
+      <div style="display:grid; gap:1.5rem;">
+        <div style="border:1px solid var(--border-teal); padding:2rem; background:rgba(27,42,74,0.2);">
+          <h4 style="color:var(--teal); font-family:var(--sans); font-size:0.75rem; font-weight:500; letter-spacing:0.15em; text-transform:uppercase; margin-bottom:0.75rem;">Our Mission</h4>
+          <p style="font-family:var(--serif); font-size:1.2rem; font-style:italic; line-height:1.5; color:var(--off-white);">To make premium wellness technology accessible, trusted, and transformative — for every individual and business across the UAE.</p>
+        </div>
+        <div style="border:1px solid var(--border-light); padding:2rem; background:rgba(255,255,255,0.02);">
+          <h4 style="color:var(--teal); font-family:var(--sans); font-size:0.75rem; font-weight:500; letter-spacing:0.15em; text-transform:uppercase; margin-bottom:0.75rem;">Our Promise</h4>
+          <p style="font-size:0.88rem; color:var(--text-muted); line-height:1.8;">Every session is performed by a trained professional. Every client receives a prior consultation. Every experience is designed with safety, comfort, and exceptional care as the foundation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CONTACT ─── -->
+<section class="contact-section section" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="overline">Get in Touch</div>
+        <div class="divider divider-left"></div>
+        <h2>Begin Your <em>Wellness Journey</em></h2>
+        <p>Whether you are a client, clinic, or corporate partner — we welcome your enquiry. A member of our team will respond within one business day.</p>
+
+        <div class="contact-detail">
+          <div>
+            <div class="contact-detail-label">Location</div>
+            <div class="contact-detail-val">Dubai, United Arab Emirates</div>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div>
+            <div class="contact-detail-label">Email</div>
+            <div class="contact-detail-val">nilesh.jain@rightwellness.com</div>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div>
+            <div class="contact-detail-label">WhatsApp</div>
+            <div class="contact-detail-val">Available upon enquiry</div>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div>
+            <div class="contact-detail-label">Service Areas</div>
+            <div class="contact-detail-val">All 7 Emirates · UAE-wide</div>
+          </div>
+        </div>
+
+        <div style="margin-top:2.5rem; padding:1.5rem; border:1px solid var(--border-teal); background:rgba(43,188,184,0.04);">
+          <div class="overline" style="margin-bottom:0.75rem;">Languages</div>
+          <p style="font-size:0.88rem; color:var(--text-muted);">We serve clients in English and Arabic. Arabic-speaking consultants are available on request.</p>
+          <p style="font-family:var(--serif); font-size:1.1rem; color:var(--teal); margin-top:0.5rem; font-style:italic;">نرحب بكم في رحلة العناية الفاخرة</p>
+        </div>
+      </div>
+
+      <div>
+        <div style="background:rgba(27,42,74,0.3); border:1px solid var(--border-teal); padding:2.5rem;">
+          <div class="overline" style="margin-bottom:1.5rem;">Enquiry Form</div>
+          <div id="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">Full Name</label>
+                <input type="text" id="fname" placeholder="Your name">
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone / WhatsApp</label>
+                <input type="tel" id="phone" placeholder="+971 …">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" placeholder="you@example.com">
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="emirate">Emirate</label>
+                <select id="emirate">
+                  <option value="" disabled selected>Select emirate</option>
+                  <option>Dubai</option>
+                  <option>Abu Dhabi</option>
+                  <option>Sharjah</option>
+                  <option>Ajman</option>
+                  <option>Ras Al Khaimah</option>
+                  <option>Fujairah</option>
+                  <option>Umm Al Quwain</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="enquiry-type">Enquiry Type</label>
+                <select id="enquiry-type">
+                  <option value="" disabled selected>Select type</option>
+                  <option>Individual / Personal Session</option>
+                  <option>VIP / Executive Wellness</option>
+                  <option>Clinic or Spa Partnership</option>
+                  <option>Corporate Wellness Programme</option>
+                  <option>General Information</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="service-interest">Service Interest</label>
+              <select id="service-interest">
+                <option value="" disabled selected>Select a service</option>
+                <option>Wellness Care</option>
+                <option>Body Wellness & Shaping Support</option>
+                <option>Facial Wellness</option>
+                <option>Recovery & Relaxation</option>
+                <option>Executive Wellness Package</option>
+                <option>B2B / Clinic Integration</option>
+                <option>Not sure — please advise</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" placeholder="Tell us about your wellness goals or how we can help…"></textarea>
+            </div>
+            <div class="form-privacy">By submitting this form, you agree to be contacted by the rightWELLNESS UAE team regarding your enquiry. We respect your privacy and will never share your information with third parties.</div>
+            <button onclick="submitForm()" class="btn btn-primary" style="width:100%; margin-top:1.25rem;">Submit Enquiry</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <img src="assets/wellnessLogo.svg" alt="">
+        </div>
+        <div class="footer-tagline">Premium wellness technology and consultation-led care for Dubai's modern lifestyle. Serving clients and businesses across all seven Emirates.</div>
+        <div style="margin-top:1.5rem; font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--teal);">rightwellness.ae</div>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <a href="#services">Wellness Care</a>
+        <a href="#services">Body Wellness</a>
+        <a href="#services">Facial Wellness</a>
+        <a href="#services">Recovery & Relaxation</a>
+        <a href="#vip">Executive Packages</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="#technology">Our Technology</a>
+        <a href="#clinics">For Clinics & Spas</a>
+        <a href="#vip">VIP Wellness</a>
+        <a href="#safety">Safety & Suitability</a>
+        <a href="#about">About Us</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <a href="#contact">Book an Enquiry</a>
+        <a href="mailto:hello@rightwellness.ae">hello@rightwellness.ae</a>
+        <a href="#partners">B2B Partnerships</a>
+        <a href="#contact">Arabic Support</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 rightWELLNESS UAE · All rights reserved · Dubai, UAE</p>
+      <p style="text-align:right; max-width:480px;">rightWELLNESS services are wellness and aesthetic-care experiences, not medical treatments. Always consult a qualified healthcare professional before commencing any new wellness programme.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Toast -->
+<div class="toast" id="toast">Thank you — your enquiry has been received. We will be in touch shortly.</div>
+
+<script>
+function closeMob() {
+  document.getElementById('mob-menu').classList.remove('open');
+}
+document.getElementById('ham').addEventListener('click', function() {
+  document.getElementById('mob-menu').classList.toggle('open');
+});
+
+// Close menu on outside click
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('nav') && !e.target.closest('#mob-menu')) {
+    document.getElementById('mob-menu').classList.remove('open');
+  }
+});
+
+// Smooth active nav
+const sections = document.querySelectorAll('section[id], div[id]');
+const navAs = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', function() {
+  let curr = '';
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 120) curr = s.id;
+  });
+  navAs.forEach(a => {
+    a.classList.remove('active');
+    if (a.getAttribute('href') === '#' + curr) a.classList.add('active');
+  });
+});
+
+// Form submit
+function submitForm() {
+  const name = document.getElementById('fname').value.trim();
+  const email = document.getElementById('email').value.trim();
+  if (!name || !email) {
+    alert('Please provide your name and email address.');
+    return;
+  }
+  const toast = document.getElementById('toast');
+  toast.style.display = 'block';
+  setTimeout(() => { toast.style.display = 'none'; }, 5000);
+  document.getElementById('fname').value = '';
+  document.getElementById('phone').value = '';
+  document.getElementById('email').value = '';
+  document.getElementById('message').value = '';
+}
+
+// Intersection Observer for fade-up elements
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.service-card, .audience-card, .spec-item, .attachment-card, .vip-card').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  observer.observe(el);
+});
+</script>
+</body>
+</html>
